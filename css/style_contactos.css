@@ -15,7 +15,7 @@ ul{
     font-size: 3em;
 }
 .contact-wrapper{
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+    box-shadow: 0 0 20px 0 rgba(255, 153, 0, 0.3);
 }
 .contact-wrapper > *{
     padding: 1em;
