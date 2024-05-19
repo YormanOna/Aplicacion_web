@@ -230,9 +230,7 @@ html {
 }
 
 /*Categorias*/
-.course {
-  background-color: hsl(36, 33%, 94%);
-}
+
 .course *,
 .course::after,
 .course::before{
@@ -241,7 +239,7 @@ html {
 
 .course-card {
   position: relative;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 17%, 94%);
   border-radius: 5px;
   overflow: hidden;
   margin: 20px;

@@ -28,7 +28,7 @@
         display: flex; 
         align-items: center; 
         justify-content: center; 
-        background-image: url(./img/header4.jpg);
+        background-image: url(../img/header4.jpg);
         background-position: top;
         background-size: center; 
         filter: sepia(10%) saturate(100%) hue-rotate(10deg);
@@ -494,45 +494,14 @@
         color: var(--fontColor);
     }
     
-    #sub {
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--fontColor);
-        margin: 0px 0px;
-    }
-    
-    #sub form input {
-        color: #0a0909;
-        border-radius: 5px;
-        outline: none;
-        border: none;
-        padding: 10px;
-    }
+ 
     
      ::placeholder {
         letter-spacing: 1px;
         color: rgb(38, 38, 38);
     }
     
-    #sub form input[type="email"] {
-        width: 550px;
-        height: 55px;
-        font-size: 1rem;
-    }
-    
-    #sub form input[type="submit"] {
-        width: 150px;
-        height: 55px;
-        color: #ffffff;
-        font-size: 1rem;
-        font-weight: bold;
-        background-color: #08e057;
-        letter-spacing: 1px;
-    }
-    
+
     .f-block h2 {
         text-align: center;
         margin: 0px 0px 30px 0px;
