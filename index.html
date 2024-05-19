@@ -1,77 +1,582 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/style_contactos.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/style_contactos.css" />
     <title>Contactos</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <section class="contac_contenedor">
-        <h1 class="titulo">Contactanos</h1>
-            <div class="contact-wrapper animate bounceInUp">
-                <div class="formulario-contacto">
-                    <h3>Contactanos estamos para ayudarte</h3>
-                    <form action="https://formsubmit.co/luisorlo1997@gmail.com" method="POST">
-                        <p>
-                            <label for="">Nombres</label>
-                            <input type="text" name="name">
-                        </p>
-                        <p>
-                            <label for="">Email</label>
-                            <input type="email" name="email">
-                        </p>
-                        <p>
-                            <label for="">Telefono</label>
-                            <input type="text" name="phone">
-                        </p>
-                        
-                        <p class="block">
-                            <label for="">Mensaje</label>
-                            <textarea name="comments" rows="3"></textarea>
-                        </p>
-                        <p class="block">
-                            <input type="submit" value="Enviar" class="boton" onclick="alerta()">
-                        </p>
-                        <input type="hidden" name="_template" value="box">
-                        <input type="hidden" name="_next" value="https://aplicacion-web-swart.vercel.app/">
-                        <input type="hidden" name="_captcha" value="false">
-                    </form>
-                </div>
-                <div class="informacion-contactos">
-                    <h4>Mas informacion</h4>
-                    <ul>
-                        <li><i class="fa-solid fa-location-dot"></i> Calle Amazonas</li>
-                        <br>
-                        <li><i class="fa-solid fa-phone-volume"></i> 0998427872</li>
-                        <br>
-                        <li><i class="fa-solid fa-envelope-open-text"></i> company@gmail.com</li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Dicta nesciunt eligendi molestiae laboriosam corporis, 
-                        pariatur dolor cupiditate, suscipit minus incidunt molestias 
-                    </p>
-                    <p>Sheylee y Asociados</p>
+      <h1 class="titulo">Contactanos</h1>
+      <div class="contact-wrapper animate bounceInUp">
+        <div class="formulario-contacto">
+          <form
+            action="https://formsubmit.co/luisorlo1997@gmail.com"
+            method="POST"
+            onsubmit="enviarFormulario()"
+          >
+            <p>
+              <label for="">Nombres</label>
+              <input
+                type="text"
+                name="name"
+                pattern="[A-Za-z\s]+"
+                title="Solo se permiten letras"
+                required
+              />
+            </p>
+            <p>
+              <label for="">Email</label>
+              <input type="email" name="email" required />
+            </p>
+            <p>
+              <label for="">Telefono</label>
+              <input
+                type="text"
+                name="phone"
+                pattern="\d+"
+                title="Solo se permiten números"
+                required
+              />
+            </p>
 
-                </div>
-            </div>
+            <p class="block">
+              <label for="">Mensaje</label>
+              <textarea name="comments" rows="3" required></textarea>
+            </p>
+            <p class="block">
+              <input type="submit" value="Enviar" class="boton" />
+            </p>
+            <input type="hidden" name="_template" value="box" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://aplicacion-web-swart.vercel.app/"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+          </form>
+        </div>
+        <div class="informacion-contactos">
+          <h4>Mas informacion</h4>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> Calle Amazonas</li>
+
+            <li><i class="fa-solid fa-phone-volume"></i> 0998427872</li>
+
+            <li>
+              <i class="fa-solid fa-envelope-open-text"></i> empire@gmail.com
+            </li>
+          </ul>
+          <p>
+            Estamos aquí para ayudarte. Si tienes alguna pregunta o necesitas
+            más información sobre nuestros programas académicos, no dudes en
+            ponerte en contacto con nosotros.
+          </p>
+          <p style="font-weight: bold; color: rgb(157, 71, 236);">EMPIRE GROUP</p>
+        </div>
+      </div>
     </section>
 
+    <section class="section course" id="courses" aria-label="course">
+      <div class="container">
+        <p class="section-subtitle">Cursos Populares</p>
 
-    
-</body>
-<script>
-    function alerta(){
-        swal({
-            title: "¡Mensaje enviado con exito!",
-            text: "Nos estaremos comunicando con usted lo mas pronto posible.",
-            icon: "success",
-            button: "Aceptar"
-        });
+        <h2 class="h2 section-title">Elija un curso para comenzar</h2>
+
+        <ul class="grid-list">
+          <li>
+            <div class="course-card">
+              <figure
+                class="card-banner img-holder"
+                style="--width: 370; --height: 220"
+              >
+                <img
+                  src="./img/course-1.png"
+                  width="370"
+                  height="220"
+                  loading="lazy"
+                  class="img-cover"
+                  style="margin: 0"
+                />
+              </figure>
+
+              <div class="abs-badge">
+                <i
+                  class="fa-regular fa-clock"
+                  aria-hidden="true"
+                  style="position: relative; top: -2.5px"
+                ></i>
+
+                <span class="span">4 Meses</span>
+              </div>
+
+              <div class="card-content">
+                <span class="badge">Principiante</span>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Matemáticas</a>
+                </h3>
+
+                <div class="wrapper">
+                  <div class="rating-wrapper">
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                  </div>
+
+                  <p class="rating-text">(5/5)</p>
+                </div>
+                <br />
+                <data class="price" value="29">$29.00</data>
+                <br />
+                <br />
+                <ul class="card-meta-list">
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="span">25 Lecciones</span>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="span">21 Estudiantes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="course-card">
+              <figure
+                class="card-banner img-holder"
+                style="--width: 370; --height: 220"
+              >
+                <img
+                  src="./img/course-2.jpg"
+                  width="370"
+                  height="220"
+                  loading="lazy"
+                  class="img-cover"
+                />
+              </figure>
+
+              <div class="abs-badge">
+                <i
+                  class="fa-regular fa-clock"
+                  aria-hidden="true"
+                  style="position: relative; top: -2.5px"
+                ></i>
+
+                <span class="span">3 Meses</span>
+              </div>
+
+              <div class="card-content">
+                <span class="badge">Intermedio</span>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Fisica</a>
+                </h3>
+
+                <div class="wrapper">
+                  <div class="rating-wrapper">
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                  </div>
+
+                  <p class="rating-text">(4.5 /5)</p>
+                </div>
+                <br />
+                <data class="price" value="39">$39.00</data>
+                <br /><br />
+                <ul class="card-meta-list">
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="span">15 Lecciones</span>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="span">15 Estudiantes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="course-card">
+              <figure
+                class="card-banner img-holder"
+                style="--width: 370; --height: 220"
+              >
+                <img
+                  src="./img/course-3.jpg"
+                  width="370"
+                  height="220"
+                  loading="lazy"
+                  class="img-cover"
+                />
+              </figure>
+
+              <div class="abs-badge">
+                <i
+                  class="fa-regular fa-clock"
+                  aria-hidden="true"
+                  style="position: relative; top: -2.5px"
+                ></i>
+
+                <span class="span">4 Meses</span>
+              </div>
+
+              <div class="card-content">
+                <span class="badge">Basico</span>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Programacion</a>
+                </h3>
+
+                <div class="wrapper">
+                  <div class="rating-wrapper">
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                  </div>
+
+                  <p class="rating-text">(4.9/5)</p>
+                </div>
+                <br />
+                <data class="price" value="35">$35.00</data>
+                <br /><br />
+                <ul class="card-meta-list">
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="span">13 Lecciones</span>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="span">18 Estudiantes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="course-card">
+              <figure
+                class="card-banner img-holder"
+                style="--width: 370; --height: 220"
+              >
+                <img
+                  src="./img/course-4.jpg"
+                  width="370"
+                  height="220"
+                  loading="lazy"
+                  class="img-cover"
+                />
+              </figure>
+
+              <div class="abs-badge">
+                <i
+                  class="fa-regular fa-clock"
+                  aria-hidden="true"
+                  style="position: relative; top: -2.5px"
+                ></i>
+                <span class="span">2 Meses</span>
+              </div>
+
+              <div class="card-content">
+                <span class="badge">Basico</span>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Historia</a>
+                </h3>
+
+                <div class="wrapper">
+                  <div class="rating-wrapper">
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                  </div>
+
+                  <p class="rating-text">(4.9 /5)</p>
+                </div>
+                <br />
+                <data class="price" value="25">$25.00</data>
+                <br /><br />
+                <ul class="card-meta-list">
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="span">10 Lecciones</span>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="span">30 Estudiantes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="course-card">
+              <figure
+                class="card-banner img-holder"
+                style="--width: 370; --height: 220"
+              >
+                <img
+                  src="./img/course-5.jpg"
+                  width="370"
+                  height="220"
+                  loading="lazy"
+                  class="img-cover"
+                />
+              </figure>
+
+              <div class="abs-badge">
+                <i
+                  class="fa-regular fa-clock"
+                  aria-hidden="true"
+                  style="position: relative; top: -2.5px"
+                ></i>
+
+                <span class="span">4 Meses</span>
+              </div>
+
+              <div class="card-content">
+                <span class="badge">Avanzado</span>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Quimica</a>
+                </h3>
+
+                <div class="wrapper">
+                  <div class="rating-wrapper">
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                  </div>
+
+                  <p class="rating-text">(4.5 /5)</p>
+                </div>
+                <br />
+                <data class="price" value="45">$45.00</data>
+                <br /><br />
+                <ul class="card-meta-list">
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="span">20 Lecciones</span>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="span">20 Estudiantes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="course-card">
+              <figure
+                class="card-banner img-holder"
+                style="--width: 370; --height: 220"
+              >
+                <img
+                  src="./img/course-6.jpg"
+                  width="370"
+                  height="220"
+                  loading="lazy"
+                  class="img-cover"
+                />
+              </figure>
+
+              <div class="abs-badge">
+                <i
+                  class="fa-regular fa-clock"
+                  aria-hidden="true"
+                  style="position: relative; top: -2.5px"
+                ></i>
+
+                <span class="span">3 Meses</span>
+              </div>
+
+              <div class="card-content">
+                <span class="badge">Intermedio</span>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Computacion</a>
+                </h3>
+
+                <div class="wrapper">
+                  <div class="rating-wrapper">
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-lg"
+                      style="color: #ffd43b"
+                    ></i>
+                  </div>
+
+                  <p class="rating-text">(4.9 /5)</p>
+                </div>
+                <br />
+                <data class="price" value="40">$40.00</data>
+                <br /><br />
+                <ul class="card-meta-list">
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="span">18 Lecciones</span>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <i class="fa-solid fa-user-group"></i>
+
+                    <span class="span">15 Estudiantes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <a href="#" class="btn has-before">
+          <span class="span">Explorar más cursos</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+    </section>
+  </body>
+  <script>
+    function enviarFormulario() {
+      localStorage.setItem("formEnviado", "true");
     }
-</script>
+    window.onload = function () {
+      if (localStorage.getItem("formEnviado") == "true") {
+        swal({
+          title: "¡Mensaje enviado con exito!",
+          text: "Nos estaremos comunicando con usted lo mas pronto posible.",
+          icon: "success",
+          button: "Aceptar",
+        });
+      }
+    };
+  </script>
 </html>
