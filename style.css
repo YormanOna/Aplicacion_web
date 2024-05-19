@@ -4,7 +4,7 @@
     }
     
     body {
-        margin: 0;
+        margin:0;
         padding: 0;
         font-family: Poppins;
     }
@@ -673,51 +673,114 @@
     
     footer {
         background-color:#26272b;
-        padding:45px 0 20px;
         font-size:15px;
-        line-height:24px;
         color:#737373;
+        padding: 0px 0px 5px;
+    }
+
+    footer hr
+    {
+        border-top-color:#ffffff;
+        opacity:0.5;
+        width: 90%
+    }
+
+    footer .container{
         display: grid;
-        grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3];
+        grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3] 1fr [x4] 1fr [x5];
         grid-template-rows: [y0] 1fr [y1] 1fr [y2];
     }
 
-    footer .AboutUs
-    {
-        grid-column: x0 / x2;
-        grid-row: y0 / y1;      
+    .container > * {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    footer .Courses
+    .container .AboutUs
     {
-        grid-column: x1 / x3;
-        grid-row: y0 / y1;   
+        grid-column: x0 / x3;
+        grid-row: y0 / y2;      
     }
 
-    footer .Copyright
+    .container .Courses
     {
-        grid-column: x1 / x3;
-        grid-row: y1 / y2;      
+        grid-column: x3 / x4;
+        grid-row: y0 / y2;   
     }
 
-    footer .Socials
+    .container .Socials
     {
-        grid-column: x0 / x1;
-        grid-row: y1 / y2;   
+        grid-column: x4 / x5;
+        grid-row: y0 / y2;   
     }
-
 
     footer h6
     {
       color:#fff;
       font-size:16px;
       text-transform:uppercase;
-      margin-top:5px;
       letter-spacing:2px
     }
 
     footer a{
       color:#737373;
     }
+
+    .footer-links{
+        padding-left:0;
+        list-style:none
+    }
+
+    .footer-links li
+    {
+      display:block
+    }
+
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover{
+        color:#3366cc;
+    }
+    .footer-links.inline li
+    {
+      display:inline-block
+    }
+
+    footer .social-icons a
+    {
+      width:40px;
+      height:40px;
+      line-height:40px;
+      border-radius:100%;
+      background-color:#33353d;
+      font-size:16px;
+      display:inline-block;
+      text-align:center;
+      -webkit-transition:all .2s linear;
+      -o-transition:all .2s linear;
+      transition:all .2s linear
+    }
+
+    .social-icons li
+    {  
+      margin-bottom:4px
+    }
+
+    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+    {
+      color:#fff
+    }
+
+    .social-icons a.facebook:hover
+    {
+      background-color:#3b5998
+    }
+    .social-icons a.twitter:hover
+    {
+      background-color:#00aced
+    }
+    .social-icons a.instagram:hover
+    {
+      background-color:#ea4c89
+    }
+    
 
     
