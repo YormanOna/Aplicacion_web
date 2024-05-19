@@ -31,3 +31,17 @@ function slideup() {
 
 
 }
+
+function enviarFormulario() {
+    localStorage.setItem("formEnviado", "true");
+  }
+  window.onload = function () {
+    if (localStorage.getItem("formEnviado") == "true") {
+      swal({
+        title: "¡Mensaje enviado con exito!",
+        text: "Nos estaremos comunicando con usted lo mas pronto posible.",
+        icon: "success",
+        button: "Aceptar",
+      });
+    }
+  };

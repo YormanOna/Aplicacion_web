@@ -15,7 +15,8 @@
         rel="stylesheet">
 
     <!--link css-->
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style_contactos.css">
 
     <!--link fontawsome-->
     <script src="https://kit.fontawesome.com/92800ec90a.js" crossorigin="anonymous"></script>
@@ -72,90 +73,479 @@
 
     </section>
 
-    <section id="classroom">
-
-        <div class="class-text">
-            <strong>COURSE CATALOG</strong>
-            <h2>online <span>course</span> for Web Developmnet</h2>
+    <section class="section course" id="courses" aria-label="course">
+        <div class="container">
+          <p class="section-subtitle">Cursos Populares</p>
+  
+          <h2 class="h2 section-title">Elija un curso para comenzar</h2>
+  
+          <ul class="grid-list">
+            <li>
+              <div class="course-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 370; --height: 220"
+                >
+                  <img
+                    src="./img/course-1.png"
+                    width="370"
+                    height="220"
+                    loading="lazy"
+                    class="img-cover"
+                    style="margin: 0"
+                  />
+                </figure>
+  
+                <div class="abs-badge">
+                  <i
+                    class="fa-regular fa-clock"
+                    aria-hidden="true"
+                    style="position: relative; top: -2.5px"
+                  ></i>
+  
+                  <span class="span">4 Meses</span>
+                </div>
+  
+                <div class="card-content">
+                  <span class="badge">Principiante</span>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Matemáticas</a>
+                  </h3>
+  
+                  <div class="wrapper">
+                    <div class="rating-wrapper">
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                    </div>
+  
+                    <p class="rating-text">(5/5)</p>
+                  </div>
+                  <br />
+                  <data class="price" value="29">$29.00</data>
+                  <br />
+                  <br />
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-book"></i>
+                      <span class="span">25 Lecciones</span>
+                    </li>
+  
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-user-group"></i>
+                      <span class="span">21 Estudiantes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li>
+              <div class="course-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 370; --height: 220"
+                >
+                  <img
+                    src="./img/course-2.jpg"
+                    width="370"
+                    height="220"
+                    loading="lazy"
+                    class="img-cover"
+                  />
+                </figure>
+  
+                <div class="abs-badge">
+                  <i
+                    class="fa-regular fa-clock"
+                    aria-hidden="true"
+                    style="position: relative; top: -2.5px"
+                  ></i>
+  
+                  <span class="span">3 Meses</span>
+                </div>
+  
+                <div class="card-content">
+                  <span class="badge">Intermedio</span>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Fisica</a>
+                  </h3>
+  
+                  <div class="wrapper">
+                    <div class="rating-wrapper">
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                    </div>
+  
+                    <p class="rating-text">(4.5 /5)</p>
+                  </div>
+                  <br />
+                  <data class="price" value="39">$39.00</data>
+                  <br /><br />
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-book"></i>
+                      <span class="span">15 Lecciones</span>
+                    </li>
+  
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-user-group"></i>
+                      <span class="span">15 Estudiantes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li>
+              <div class="course-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 370; --height: 220"
+                >
+                  <img
+                    src="./img/course-3.jpg"
+                    width="370"
+                    height="220"
+                    loading="lazy"
+                    class="img-cover"
+                  />
+                </figure>
+  
+                <div class="abs-badge">
+                  <i
+                    class="fa-regular fa-clock"
+                    aria-hidden="true"
+                    style="position: relative; top: -2.5px"
+                  ></i>
+  
+                  <span class="span">4 Meses</span>
+                </div>
+  
+                <div class="card-content">
+                  <span class="badge">Basico</span>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Programacion</a>
+                  </h3>
+  
+                  <div class="wrapper">
+                    <div class="rating-wrapper">
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                    </div>
+  
+                    <p class="rating-text">(4.9/5)</p>
+                  </div>
+                  <br />
+                  <data class="price" value="35">$35.00</data>
+                  <br /><br />
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-book"></i>
+                      <span class="span">13 Lecciones</span>
+                    </li>
+  
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-user-group"></i>
+                      <span class="span">18 Estudiantes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li>
+              <div class="course-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 370; --height: 220"
+                >
+                  <img
+                    src="./img/course-4.jpg"
+                    width="370"
+                    height="220"
+                    loading="lazy"
+                    class="img-cover"
+                  />
+                </figure>
+  
+                <div class="abs-badge">
+                  <i
+                    class="fa-regular fa-clock"
+                    aria-hidden="true"
+                    style="position: relative; top: -2.5px"
+                  ></i>
+                  <span class="span">2 Meses</span>
+                </div>
+  
+                <div class="card-content">
+                  <span class="badge">Basico</span>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Historia</a>
+                  </h3>
+  
+                  <div class="wrapper">
+                    <div class="rating-wrapper">
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                    </div>
+  
+                    <p class="rating-text">(4.9 /5)</p>
+                  </div>
+                  <br />
+                  <data class="price" value="25">$25.00</data>
+                  <br /><br />
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-book"></i>
+                      <span class="span">10 Lecciones</span>
+                    </li>
+  
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-user-group"></i>
+                      <span class="span">30 Estudiantes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li>
+              <div class="course-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 370; --height: 220"
+                >
+                  <img
+                    src="./img/course-5.jpg"
+                    width="370"
+                    height="220"
+                    loading="lazy"
+                    class="img-cover"
+                  />
+                </figure>
+  
+                <div class="abs-badge">
+                  <i
+                    class="fa-regular fa-clock"
+                    aria-hidden="true"
+                    style="position: relative; top: -2.5px"
+                  ></i>
+  
+                  <span class="span">4 Meses</span>
+                </div>
+  
+                <div class="card-content">
+                  <span class="badge">Avanzado</span>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Quimica</a>
+                  </h3>
+  
+                  <div class="wrapper">
+                    <div class="rating-wrapper">
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                    </div>
+  
+                    <p class="rating-text">(4.5 /5)</p>
+                  </div>
+                  <br />
+                  <data class="price" value="45">$45.00</data>
+                  <br /><br />
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-book"></i>
+                      <span class="span">20 Lecciones</span>
+                    </li>
+  
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-user-group"></i>
+                      <span class="span">20 Estudiantes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li>
+              <div class="course-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 370; --height: 220"
+                >
+                  <img
+                    src="./img/course-6.jpg"
+                    width="370"
+                    height="220"
+                    loading="lazy"
+                    class="img-cover"
+                  />
+                </figure>
+  
+                <div class="abs-badge">
+                  <i
+                    class="fa-regular fa-clock"
+                    aria-hidden="true"
+                    style="position: relative; top: -2.5px"
+                  ></i>
+  
+                  <span class="span">3 Meses</span>
+                </div>
+  
+                <div class="card-content">
+                  <span class="badge">Intermedio</span>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Computacion</a>
+                  </h3>
+  
+                  <div class="wrapper">
+                    <div class="rating-wrapper">
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star fa-lg"
+                        style="color: #ffd43b"
+                      ></i>
+                    </div>
+  
+                    <p class="rating-text">(4.9 /5)</p>
+                  </div>
+                  <br />
+                  <data class="price" value="40">$40.00</data>
+                  <br /><br />
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-book"></i>
+                      <span class="span">18 Lecciones</span>
+                    </li>
+  
+                    <li class="card-meta-item">
+                      <i class="fa-solid fa-user-group"></i>
+  
+                      <span class="span">15 Estudiantes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+  
+          <a href="#" class="btn has-before">
+            <span class="span">Explorar más cursos</span>
+  
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
         </div>
-
-        <div class="class-block">
-
-            <div class="box">
-
-                <div class="box-icon">
-                    <i class="fa-solid fa-graduation-cap fa-icons"></i>
-                </div>
-
-                <div class="box-text">
-                    <h2> Online Degree Programs </h2>
-
-                    <div class="box-but">
-                        <p>We’ll walk through the essential elements of template</p>
-                        <a href="">GET STRAT</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="box">
-
-                <div class="box-icon">
-                    <i class="fa-solid fa-landmark fa-icons"></i>
-                </div>
-
-                <div class="box-text">
-                    <h2> None-Degree Programs </h2>
-
-                    <div class="box-but">
-                        <p>We’ll walk through the essential elements of template</p>
-                        <a href="">GET STRAT</a>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="box">
-
-                <div class="box-icon">
-
-                    <i class="fa-solid fa-user-graduate fa-icons"></i>
-
-                </div>
-
-                <div class="box-text">
-                    <h2> Masters Degree Program </h2>
-
-                    <div class="box-but">
-                        <p>We’ll walk through the essential elements of template</p>
-                        <a href="">GET STRAT</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="box">
-
-                <div class="box-icon">
-                    <i class="fa-sharp fa-solid fa-chalkboard fa-icons"></i>
-                </div>
-
-                <div class="box-text">
-                    <h2> Computer Scines </h2>
-
-                    <div class="box-but">
-                        <p>We’ll walk through the essential elements of template</p>
-                        <a href="">GET STRAT</a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
+      </section>
 
     <section id="about">
 
@@ -248,85 +638,77 @@
         </div>
 
     </section>
-
-    <section id="sub">
-
-        <div class="f-block">
-            <div class="f-block-2">
-                <div class="block-i">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <h1>SUBSCRIBE</h1>
-                <h2>Subscribe To receive Our Offers On Courses</h2>
-            </div>
-
-            <form>
-                <input type="email" name="email" placeholder="Example123@Gmail.com....">
-                <input type="submit" name="submit" value="SUBSCRIBE">
+    <section class="contac_contenedor">
+        <h1 class="titulo">Contactanos</h1>
+        <div class="contact-wrapper animate bounceInUp">
+          <div class="formulario-contacto">
+            <form
+              action="https://formsubmit.co/luisorlo1997@gmail.com"
+              method="POST"
+              onsubmit="enviarFormulario()"
+            >
+              <p>
+                <label for="">Nombres</label>
+                <input
+                  type="text"
+                  name="name"
+                  pattern="[A-Za-z\s]+"
+                  title="Solo se permiten letras"
+                  required
+                />
+              </p>
+              <p>
+                <label for="">Email</label>
+                <input type="email" name="email" required />
+              </p>
+              <p>
+                <label for="">Telefono</label>
+                <input
+                  type="text"
+                  name="phone"
+                  pattern="\d+"
+                  title="Solo se permiten números"
+                  required
+                />
+              </p>
+  
+              <p class="block">
+                <label for="">Mensaje</label>
+                <textarea name="comments" rows="3" style="background: rgb(255, 255, 255);
+                margin-left: 0;"></textarea>
+              </p>
+              <p class="block">
+                <input type="submit" value="Enviar" class="boton" />
+              </p>
+              <input type="hidden" name="_template" value="box" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://aplicacion-web-swart.vercel.app/"
+              />
+              <input type="hidden" name="_captcha" value="false" />
             </form>
-
-
-
-
+          </div>
+          <div class="informacion-contactos">
+            <h4>Mas informacion</h4>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i> Calle Amazonas</li>
+  
+              <li><i class="fa-solid fa-phone-volume"></i> 0998427872</li>
+  
+              <li>
+                <i class="fa-solid fa-envelope-open-text"></i> empire@gmail.com
+              </li>
+            </ul>
+            <p>
+              Estamos aquí para ayudarte. Si tienes alguna pregunta o necesitas
+              más información sobre nuestros programas académicos, no dudes en
+              ponerte en contacto con nosotros.
+            </p>
+            <p style="font-weight: bold; color: rgb(157, 71, 236);">EMPIRE GROUP</p>
+          </div>
         </div>
-    </section>
-
-
-    <section id="range">
-
-
-        <div class="form-text">
-
-            <div class="range-text">
-                <h2>CONTACT US</h2>
-
-            </div>
-
-            <div class="form-box">
-                <img src="./img/new/local-g.png">
-                <div class="box-text">
-                    <strong>ADDRESS</strong>
-                    <p>C 128/A SabaraGramp Road 49 Six learn DwonUK</p>
-                </div>
-            </div>
-
-            <div class="form-box">
-                <img src="./img/new/send.png" alt="" class="img-r-2">
-                <div class="box-text">
-                    <strong>EMAIL</strong>
-                    <p>Educate145@email.com</p>
-                </div>
-            </div>
-
-
-            <div class="form-box">
-                <img src="./img/new/telp.png" alt="" class="img-r-3">
-                <div class="box-text">
-                    <strong>TEL-PHONE</strong>
-                    <p>+94 025 12542</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="form-sec">
-
-            <form>
-
-                <div class="f-1">
-                    <input type="text" name="fname" value="" placeholder="First name">
-                    <input type="text" name="lname" value="" placeholder="Last name ">
-                </div>
-
-                <input type="email" name="email" value="" placeholder="Enter Email address">
-                <input type="tel" name="tel" value="" placeholder="Enter Tel-number ">
-                <textarea name="textarea" placeholder="Type Your Message......."></textarea>
-                <input type="submit" name="submit" value="SEND">
-            </form>
-
-        </div>
-
-    </section>
+      </section>
 
     <footer>
         <div class="container">
@@ -374,7 +756,7 @@
         </footer>
 
     <!--script js-->
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
 

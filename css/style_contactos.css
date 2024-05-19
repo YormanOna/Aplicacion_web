@@ -1,0 +1,389 @@
+/*-----------------------------------*\
+    #RESET
+\*-----------------------------------*/
+
+/*Cambiar*/
+li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+/*-----------------------------------*\
+    #REUSED STYLE
+  \*-----------------------------------*/
+
+.section {
+  padding-block: 50px;
+  margin: 0;
+}
+.btn {
+  background-color: hsl(281, 81%, 76%);
+  color: hsl(0, 0%, 100%);
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  max-width: max-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+  position: absolute;
+  content: "";
+}
+
+.btn::before {
+  inset: 0;
+  background-image: linear-gradient(
+    -90deg,
+    hsl(288, 93%, 72%) 0%,
+    hsl(276, 70%, 74%) 100%
+  );
+  z-index: -1;
+  border-radius: inherit;
+  transform: translateX(-100%);
+  transition: 0.5s ease;
+}
+
+.btn:is(:hover, :focus)::before {
+  transform: translateX(0);
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: hsl(0, 0%, 80%);
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-subtitle {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-block-end: 15px;
+}
+
+.section-text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-block: 15px 25px;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  gap: 20px;
+}
+
+.category-card,
+.stats-card {
+  background-color: hsla(var(--color), 0.1);
+}
+
+:is(.course, .blog) .section-title {
+  margin-block-end: 40px;
+}
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-block-end: 40px;
+}
+
+/*CONTACTOS*/
+
+.contac_contenedor {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    font-family: "League Spartan", sans-serif;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 0 15px rgba(240, 99, 245, 0.884);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .contact-wrapper > * {
+    padding: 2rem;
+  }
+  
+  .formulario-contacto form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .formulario-contacto form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  .formulario-contacto form p {
+    margin: 0;
+  }
+  
+  .formulario-contacto form .block {
+    grid-column: 1 / -1;
+  }
+  
+  .formulario-contacto form .boton,
+  .formulario-contacto form input,
+  .formulario-contacto form textarea {
+    width: 100%;
+    padding: 0.4rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .formulario-contacto form .boton {
+    background: rgb(248, 119, 242);
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease-out;
+  }
+  
+  .formulario-contacto form .boton:hover,
+  .formulario-contacto form .boton:focus {
+    background: rgb(193, 65, 225);
+    outline: none;
+  }
+  
+  .informacion-contactos h4,
+  .informacion-contactos ul,
+  .informacion-contactos p {
+    text-align: center;
+    margin: 0 0 1rem;
+    color: #555;
+  }
+  
+  .informacion-contactos ul {
+    padding-left: 0;
+  }
+  
+  .informacion-contactos ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+/*RESPONSIVE CONTATCTOS*/
+@media (min-width: 700px) {
+  
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contact-wrapper > * {
+    padding: 2em;
+  }
+  .informacion-contactos h4,
+  .informacion-contactos ul,
+  .informacion-contactos p {
+    text-align: left;
+  }
+}
+
+/*Categorias*/
+.course {
+  background-color: hsl(36, 33%, 94%);
+}
+.course *,
+.course::after,
+.course::before{
+  margin: 0;
+}
+
+.course-card {
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+}
+
+.course-card .img-cover {
+  transition: 0.5s ease;
+}
+
+.course-card:is(:hover, :focus-within) .img-cover {
+  transform: scale(1.1);
+}
+
+.course-card :is(.abs-badge, .badge) {
+  font-family: "League Spartan", sans-serif;
+  border-radius: 3px;
+}
+
+.course-card .abs-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: hsl(290, 100%, 64%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1;
+  padding: 6px 8px;
+  padding-block-end: 3px;
+}
+
+.course-card .card-content {
+  padding: 25px;
+}
+
+.course-card .badge {
+  background-color: hsl(171, 78%, 82%);
+  max-width: max-content;
+  color: hsl(0, 0%, 100%);
+  line-height: 25px;
+  padding-inline: 10px;
+  font-size: 1rem;
+}
+
+.course-card .card-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-block: 15px 8px;
+  transition: 0.25s ease;
+  font-size: 2rem;
+}
+
+.course-card .card-title:is(:hover, :focus) {
+  color: hsl(212, 93%, 61%);
+}
+
+.course-card :is(.wrapper, .rating-wrapper, .card-meta-list, .card-meta-item) {
+  display: flex;
+  align-items: center;
+}
+
+.course-card .wrapper {
+  gap: 10px;
+}
+
+.course-card .rating-wrapper {
+  gap: 3px;
+}
+
+.course-card .rating-text {
+  color: hsl(0, 0%, 9%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.course-card .price {
+  color: hsl(351, 83%, 61%);
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-block: 8px 15px;
+}
+
+.course-card .card-meta-list {
+  flex-wrap: wrap;
+}
+
+.course-card .card-meta-item {
+  position: relative;
+  gap: 5px;
+}
+
+.course-card .card-meta-item:not(:last-child)::after {
+  content: "|";
+  display: inline-block;
+  color: hsl(0, 0%, 90%);
+  padding-inline: 10px;
+}
+
+.span {
+  font-size: 0.8rem;
+}
+.course .btn {
+  margin-inline: auto;
+  margin-block-start: 60px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* RESPONSIVES CATEGORIES*/
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 599px) {
+  .grid-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .course-card {
+    margin: 5px;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .grid-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 15px;
+  }
+  .wrapper .rating-wrapper .fa-star{
+    font-size: 0.9rem;
+  }
+  .course-card {
+    margin: 0;
+  }
+}
