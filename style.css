@@ -28,10 +28,11 @@
         display: flex; 
         align-items: center; 
         justify-content: center; 
-        background-image: url(./img/header3.jpg);
+        background-image: url(./img/header4.jpg);
         background-position: top;
-        background-size: cover; 
-        background-repeat: no-repeat; 
+        background-size: center; 
+        filter: sepia(10%) saturate(100%) hue-rotate(10deg);
+
     }
     
     .logo {
@@ -48,9 +49,18 @@
         margin-top: 6%;
     }
     
-    p{
+    .logo p{
         font-style: italic;
-        font-family: 'Lucida Sans Unicode', sans-serif;
+        font-family: 'Rockwell', sans-serif;
+        font-size: 21px;
+        font-weight: bold;
+        margin-top: -1px;
+        color: #fff;
+        text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; 
     }
     /*-- nav --*/
     
@@ -95,7 +105,7 @@
     
     #main {
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         background-image: url(./img/new/hero-bg.svg);
         background-position: center;
         background-size: cover;
@@ -103,24 +113,26 @@
         align-items: center;
         text-align: center;
         justify-content: space-around;
+        filter: sepia(0%) saturate(200%) hue-rotate(190deg);
+       
     }
     
     .main-text {
         width: 500px;
-        height: 500px;
+        height:550px;
         align-items: center;
         text-align: left;
         text-transform: uppercase;
     }
     
     .main-text strong {
-        font-size: 1rem;
-        color: var(--fontColor);
+        font-size: 1.5rem;
+        color: #50AA8D;
         letter-spacing: 2px;
     }
     
     .main-text h2 {
-        font-size: 3rem;
+        font-size:3rem;
         text-transform: capitalize;
         color: var(--fontColorBlue);
         margin: 0;
@@ -136,7 +148,7 @@
         text-align: center;
         justify-content: center;
         padding: 8px 0px;
-        background-color: var(--fontColor);
+        background-color: #50AA50;
         color: #ffffff;
         border-radius: 4px;
     }
@@ -148,25 +160,28 @@
     .main-text p {
         font-weight: 400;
         text-transform: capitalize;
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         margin: 20px 0px;
     }
     
     .main-img {
-        width: 600px;
+        width: 700px;
         position: relative;
-        height: 100%;
+        height: 105%;
+        
     }
     
     .img-1 {
         position: absolute;
-        width: 450px;
+        width: 400px;
         height: auto;
         top: 250px;
         left: 10px;
         transform: translate(10px 250px);
         animation: linkr 2s infinite;
         -webkit-animation: linkr 2s infinite;
+        filter: sepia(15%) saturate(100%) hue-rotate(189deg);
+
     }
     
     .img-2 {
@@ -182,9 +197,9 @@
     
     .img-3 {
         position: absolute;
-        width: 150px;
+        width: 190px;
         height: auto;
-        top: 70px;
+        top: 30px;
         left: 280px;
         transform: translate(280px 70px);
         animation: linkr 2s infinite;
@@ -193,6 +208,8 @@
         -moz-transform: translate(280px 70px);
         -ms-transform: translate(280px 70px);
         -o-transform: translate(280px 70px);
+        filter: sepia(20%) saturate(200%) hue-rotate(190deg);
+        
     }
     
     @keyframes linkr {
@@ -305,17 +322,20 @@
         align-items: center;
         justify-content: space-around;
         background-image: url(./img/new/newsletter-bg.jpg);
+        filter: sepia(0%) saturate(200%) hue-rotate(280deg);
     }
     
     .about-text-block {
         width: auto;
         height: auto;
+        filter: sepia(0%) saturate(200%) hue-rotate(30deg);
     }
     
     .about-img {
         width: 580px;
         height: auto;
         position: relative;
+        filter: sepia(10%) saturate(80%) hue-rotate(60deg);
     }
     
     .about-img:hover {
@@ -379,6 +399,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
     
     .aicon-1 {
@@ -387,6 +408,7 @@
         background-color: #ebdd99;
         border-radius: 50%;
         margin: 0px 30px 0px 0px;
+        filter: sepia(10%) saturate(100%) hue-rotate(40deg);
     }
     
     .aicon-2 {
@@ -403,6 +425,7 @@
         background-color: #f3c8c8;
         border-radius: 50%;
         margin: 0px 30px 0px 0px;
+        filter: sepia(0%) saturate(100%) hue-rotate(40deg);
     }
     
     #success {
@@ -434,6 +457,7 @@
         position: relative;
         animation: boderColor 2s infinite;
         -webkit-animation: boderColor 2s initial;
+        
     }
     
     @keyframes boderColor {
